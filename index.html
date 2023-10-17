@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="This is website for form validation" />
+		<meta
+			name="keywords"
+			content="Html,CSS,JS,JS Form Validation, custom form validation" />
+		<meta name="author" content="Hashir Akbar" />
+		<link rel="stylesheet" href="public/css/style.css" />
+		<title>Form Validation</title>
+	</head>
+	<body>
+		<form
+			id="firstForm"
+			action="#"
+			method="post"
+			enctype="application/x-www-form-urlencoded"
+			novalidate
+			onsubmit="return formValidate()">
+			<div class="input-group">
+				<input type="text" name="Full_Name" placeholder="Full Name" />
+				<div class="error-message-name error"></div>
+			</div>
+			<div class="input-group">
+				<input
+					type="text"
+					name="Email_Address"
+					placeholder="Email Address" />
+				<div class="error-message-email error"></div>
+			</div>
+			<div class="input-group">
+				<input type="text" name="Phone_No" placeholder="Phone No" />
+				<div class="error-message-number error"></div>
+			</div>
+			<div class="input-group">
+				<textarea
+					name="message"
+					id=""
+					cols="30"
+					rows="10"
+					placeholder="Write about yourself"></textarea>
+				<div class="message_counter">
+					<span class="count"></span><span class="outOf">/250</span>
+				</div>
+			</div>
+			<div class="input-group">
+				<input name="form_submit" type="submit" value="Submit" />
+			</div>
+		</form>
+
+		<script src="public/js/index.js"></script>
+	</body>
+</html>

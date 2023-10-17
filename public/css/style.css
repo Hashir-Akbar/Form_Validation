@@ -1,0 +1,47 @@
+* {
+	box-sizing: border-box;
+}
+
+form {
+	max-width: 600px;
+	width: 50%;
+	margin: 2em auto;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	border: 1px solid #ccc;
+	padding: 1.5em;
+	border-radius: 4px;
+}
+input,
+textarea {
+	width: 100%;
+	padding: 0.5em 0;
+	text-indent: 14px;
+	resize: none;
+	border: 1px solid rgba(0, 0, 0, 0.23);
+	border-radius: 6px;
+}
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover {
+	outline: none;
+}
+.message_counter {
+	font-size: 0.8rem;
+}
+input[type="submit"] {
+	font: inherit;
+	cursor: pointer;
+	background: #000000ce;
+	color: white;
+	font-weight: 800;
+}
+.error {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 0.9rem;
+	color: red;
+	text-align: end;
+	font-weight: 500;
+}
