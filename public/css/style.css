@@ -45,3 +45,7 @@ input[type="submit"] {
 	text-align: end;
 	font-weight: 500;
 }
+textarea {
+	text-indent: 0;
+	padding-inline: 1em;
+}

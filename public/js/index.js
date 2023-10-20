@@ -8,7 +8,10 @@ let errorMessageName = document.querySelector(".error-message-name");
 let errorMessageEmail = document.querySelector(".error-message-email");
 let errorMessageNumber = document.querySelector(".error-message-number");
 let errorMessagePass = document.querySelector(".error-message-password");
+let errorMessage = document.querySelector(".error-message-message");
 let count = document.querySelector(".count");
+// let valueLength = formMessage.value;
+
 console.log(formValidate());
 
 function main() {
@@ -20,8 +23,11 @@ function main() {
 }
 function formValidate() {
 	if (
-		(nameValidation(), emailValidation(), numberValidation(), strongPass()) ==
-		true
+		(nameValidation(),
+		emailValidation(),
+		numberValidation(),
+		strongPass(),
+		check()) == true
 	) {
 		return true;
 	} else false;
@@ -101,5 +107,19 @@ function strongPass() {
 	}
 }
 
-// let valueLength = formMessage.value;
-// count.innerHTML = valueLength.length;
+formMessage.addEventListener("input", () => {
+	let valueLength = formMessage.value;
+	let length = Number(valueLength.length);
+	count.innerHTML = length;
+	check(length);
+});
+
+function check(e) {
+	if (e > 250) {
+		errorMessage.innerHTML = `Length Should be less than 250 characters`;
+		return false;
+	} else if (e <= 250) {
+		errorMessage.innerHTML = ``;
+		return true;
+	}
+}
