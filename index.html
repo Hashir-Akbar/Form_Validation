@@ -18,7 +18,7 @@
 			method="post"
 			enctype="application/x-www-form-urlencoded"
 			novalidate
-			onsubmit="return formValidate()">
+			onsubmit="return main()">
 			<div class="input-group">
 				<input type="text" name="Full_Name" placeholder="Full Name" />
 				<div class="error-message-name error"></div>
@@ -35,6 +35,10 @@
 				<div class="error-message-number error"></div>
 			</div>
 			<div class="input-group">
+				<input type="password" name="Password" placeholder="Password" />
+				<div class="error-message-password error"></div>
+			</div>
+			<div class="input-group">
 				<textarea
 					name="message"
 					id=""
@@ -42,7 +46,7 @@
 					rows="10"
 					placeholder="Write about yourself"></textarea>
 				<div class="message_counter">
-					<span class="count"></span><span class="outOf">/250</span>
+					<span class="count">0</span><span class="outOf">/250</span>
 				</div>
 			</div>
 			<div class="input-group">
